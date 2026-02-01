@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Health ID — Prototype</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28'><rect width='28' height='28' rx='6' fill='%23336BFF'/><text x='7' y='19' font-family='Arial' font-size='14' fill='white'>H</text></svg>" alt="logo">
+        <h1>My Health ID</h1>
+      </div>
+      <div class="top-actions">
+        <select id="language" aria-label="Language">
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+        </select>
+        <button id="emergency-btn" class="danger">Emergency</button>
+        <div class="user-avatar" id="role-selector">
+          <label for="role">Role:</label>
+          <select id="role" aria-label="Select role">
+            <option value="patient">Patient</option>
+            <option value="clinician">Clinician</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <nav class="sidenav" id="sidenav">
+        <ul>
+          <li data-view="dashboard" class="active">Dashboard</li>
+          <li data-view="health-id">My Health ID</li>
+          <li data-view="records">Records</li>
+          <li data-view="appointments">Appointments</li>
+          <li data-view="telemed">Telemedicine</li>
+          <li data-view="derm">Dermatology</li>
+          <li data-view="drug-checker">Drug Checker</li>
+          <li data-view="hie">HIE / Transfers</li>
+          <li data-view="admin" class="admin-only">Admin Console</li>
+        </ul>
+      </nav>
+
+      <main class="main" id="main">
+        <!-- Views rendered here -->
+      </main>
+
+      <aside class="right-rail" id="right-rail" aria-hidden="false">
+        <!-- Quick patient summary / context -->
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <small>Prototype — do not use in production. Built for planning & UI design.</small>
+    </footer>
+  </div>
+
+  <script src="sample-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
